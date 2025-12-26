@@ -1,0 +1,20 @@
+[
+  {
+    "index": 91991,
+    "id": "9e31e1113994-a3ed-47ca-a014-d4483884cfe2",
+    "featuredImage": "https://images.pexels.com/photos/6843304/pexels-photo-6843304.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+    "title": "Lenovo’s smarter devices ",
+    "desc": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
+    "date": "May 20, 2021",
+    "href": "/single-audio/this-is-single-slug",
+    "commentCount": 11,
+    "viewdCount": 2504,
+    "readingTime": 2,
+    "bookmark": { "count": 3007, "isBookmarked": false },
+    "like": { "count": 3366, "isLiked": true },
+    "authorId": 3,
+    "categoriesId": [3, 12],
+    "postType": "audio",
+    "audioUrl": "http://localhost:8000/api/v1/podcast/audio/Lisa_Carter_1.mp3"
+  }
+]

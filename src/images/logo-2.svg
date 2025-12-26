@@ -1,0 +1,94 @@
+<svg
+  width="120"
+  height="120"
+  viewBox="0 0 120 120"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <style>
+    @keyframes pulse {
+      0%, 100% { opacity: 0.7; }
+      50% { opacity: 0.35; }
+    }
+    .animate-pulse { animation: pulse 1.2s ease-in-out infinite; }
+  </style>
+
+  <!-- Microphone base circle -->
+  <circle cx="60" cy="60" r="50" fill="#6366F1" opacity="0.1" />
+
+  <!-- Cat ears - smoother curved triangles -->
+  <path
+    d="M35 38 Q32 28 30 18 Q32 20 35 24 Q38 28 38 32 Q38 35 35 38 Z"
+    fill="#6366F1"
+    stroke="#4F46E5"
+    stroke-width="2"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+  />
+  <path
+    d="M85 38 Q88 28 90 18 Q88 20 85 24 Q82 28 82 32 Q82 35 85 38 Z"
+    fill="#6366F1"
+    stroke="#4F46E5"
+    stroke-width="2"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+  />
+
+  <!-- Cat head -->
+  <circle cx="60" cy="50" r="25" fill="#6366F1" />
+
+  <!-- Cat eyes -->
+  <circle cx="52" cy="48" r="3" fill="white" />
+  <circle cx="68" cy="48" r="3" fill="white" />
+
+  <!-- Cat nose - smoother shape -->
+  <path
+    d="M60 54 Q58 56 57 58 Q58.5 57.5 60 57 Q61.5 57.5 63 58 Q62 56 60 54 Z"
+    fill="#4F46E5"
+  />
+
+  <!-- Cat whiskers -->
+  <line x1="40" y1="52" x2="48" y2="52" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+  <line x1="40" y1="56" x2="48" y2="55" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+  <line x1="72" y1="52" x2="80" y2="52" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+  <line x1="72" y1="55" x2="80" y2="56" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+
+  <!-- Microphone body - more rounded -->
+  <rect
+    x="52"
+    y="75"
+    width="16"
+    height="25"
+    rx="8"
+    fill="#4F46E5"
+    stroke="#3730A3"
+    stroke-width="2"
+    stroke-linejoin="round"
+  />
+
+  <!-- Microphone grid lines - rounded ends -->
+  <line x1="54" y1="82" x2="66" y2="82" stroke="#3730A3" stroke-width="1" stroke-linecap="round" />
+  <line x1="54" y1="87" x2="66" y2="87" stroke="#3730A3" stroke-width="1" stroke-linecap="round" />
+  <line x1="54" y1="92" x2="66" y2="92" stroke="#3730A3" stroke-width="1" stroke-linecap="round" />
+
+  <!-- Microphone stand - smoother curves -->
+  <path
+    d="M60 100 Q60 102 60 105 M52 105 Q56 105 60 105 Q64 105 68 105"
+    stroke="#3730A3"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Sound waves - smoother curves -->
+  <path d="M20 50 Q19 48 18 50 Q19 52 20 50" stroke="#6366F1" stroke-width="2" stroke-linecap="round" opacity="0.6" />
+  <path d="M15 50 Q14 48 12 50 Q14 52 15 50" stroke="#6366F1" stroke-width="2" stroke-linecap="round" opacity="0.4" />
+  <path d="M100 50 Q101 48 102 50 Q101 52 100 50" stroke="#6366F1" stroke-width="2" stroke-linecap="round" opacity="0.6" />
+  <path d="M105 50 Q106 48 108 50 Q106 52 105 50" stroke="#6366F1" stroke-width="2" stroke-linecap="round" opacity="0.4" />
+
+  <!-- Animated sound waves - smoother -->
+  <g class="animate-pulse">
+    <path d="M22 45 Q24 50 22 55" stroke="#6366F1" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.7" />
+    <path d="M98 45 Q96 50 98 55" stroke="#6366F1" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.7" />
+  </g>
+</svg>
