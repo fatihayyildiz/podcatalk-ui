@@ -159,17 +159,6 @@ const initialMessages = [
 function ChatSidebar() {
   return (
     <Sidebar collapsible="none" className="border-r">
-      <SidebarHeader className="flex flex-row items-center justify-between gap-2 px-2 py-4">
-        <div className="flex flex-row items-center gap-2 px-2">
-          <div className="bg-primary/10 size-8 rounded-md"></div>
-          <div className="text-md font-base text-primary tracking-tight">
-            zola.chat
-          </div>
-        </div>
-        <Button variant="ghost" className="size-8">
-          <Search className="size-4" />
-        </Button>
-      </SidebarHeader>
       <SidebarContent className="pt-4">
         <div className="px-4">
           <Button
@@ -177,7 +166,7 @@ function ChatSidebar() {
             className="mb-4 flex w-full items-center gap-2"
           >
             <PlusIcon className="size-4" />
-            <span>New Chat</span>
+            <span>New Conversation</span>
           </Button>
         </div>
         {conversationHistory.map((group) => (
@@ -233,6 +222,10 @@ function ChatContent() {
 
   return (
     <main className="flex min-h-0 flex-1 flex-col overflow-y-auto">
+      <header className="bg-background z-10 flex h-16 w-full shrink-0 items-center gap-2 border-b px-4">
+        <SidebarTrigger className="-ml-1" />
+        <div className="text-foreground">Project roadmap discussion</div>
+      </header>
       <div ref={chatContainerRef} className="relative flex-1 overflow-y-auto">
         <ChatContainerRoot className="h-full flex flex-col">
           <ChatContainerContent className="space-y-0 px-5 py-12">
@@ -353,35 +346,8 @@ function ChatContent() {
                     className="min-h-[44px] pt-3 pl-4 text-base leading-[1.3] sm:text-base md:text-base"
                   />
 
-                  <PromptInputActions className="mt-5 flex w-full items-center justify-between gap-2 px-3 pb-3">
-                    <div className="flex items-center gap-2">
-                      <PromptInputAction tooltip="Add a new action">
-                        <Button
-                          variant="outline"
-                          size="icon"
-                          className="size-9 rounded-full"
-                        >
-                          <Plus size={18} />
-                        </Button>
-                      </PromptInputAction>
-
-                      <PromptInputAction tooltip="Search">
-                        <Button variant="outline" className="rounded-full">
-                          <Globe size={18} />
-                          Search
-                        </Button>
-                      </PromptInputAction>
-
-                      <PromptInputAction tooltip="More actions">
-                        <Button
-                          variant="outline"
-                          size="icon"
-                          className="size-9 rounded-full"
-                        >
-                          <MoreHorizontal size={18} />
-                        </Button>
-                      </PromptInputAction>
-                    </div>
+                  <PromptInputActions className="mt-5 flex w-full items-center justify-end gap-2 px-3 pb-3">
+                    
                     <div className="flex items-center gap-2">
                       <PromptInputAction tooltip="Voice input">
                         <Button
@@ -423,7 +389,7 @@ function ChatContent() {
 function FullChatApp() {
   return (
     <div className="flex h-full min-h-0 w-full overflow-hidden">
-      <SidebarProvider>
+      <SidebarProvider className="flex min-h-0 w-full">
         <ChatSidebar />
         <SidebarInset>
           <ChatContent />

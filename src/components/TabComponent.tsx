@@ -13,7 +13,7 @@ const TabComponent: React.FC<TabComponentProps> = ({ tabs }) => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <div className="w-full">
+    <div className="flex w-full flex-col">
       <div className="flex flex-row justify-center border-b border-gray-300 dark:border-gray-700">
         {tabs.map((tab, index) => (
           <button
@@ -29,10 +29,7 @@ const TabComponent: React.FC<TabComponentProps> = ({ tabs }) => {
           </button>
         ))}
       </div>
-      <div
-        className="p-4 bg-white border border-gray-300 rounded-b-lg h-screen dark:bg-gray-900 dark:border-gray-700"
-        style={{ minHeight: '400px', maxHeight: 'calc(100vh - 120px)' }}
-      >
+      <div className="flex min-h-[400px] flex-1 flex-col overflow-hidden rounded-b-lg border border-gray-300 bg-white p-4 max-h-[calc(100vh-120px)] dark:bg-gray-900 dark:border-gray-700">
         {tabs[activeTab].content}
       </div>
     </div>
