@@ -47,10 +47,8 @@ const PageEditPodcast = ({ podcastId }: EditPodcastProps) => {
     {
       label: "Conversation",
       content: (
-        <div className="h-full">
 
         <FullChatApp />
-        </div>
       ),
     },
     {
@@ -66,7 +64,7 @@ const PageEditPodcast = ({ podcastId }: EditPodcastProps) => {
   ];
 
   return (
-    <div className="">
+    <div className="w-full h-full">
       <TabComponent tabs={tabs} />
     </div>
   );
