@@ -20,6 +20,7 @@ import PagePricing from "pages/pricing/pricing";
 import PageCreatePodcast from "pages/studio/create-podcast/create-podcast";
 import PageConfirmEmailNew from "pages/authentication/confirm-email-new";
 import PagePasswordChange from "pages/authentication/password-change";
+// import {ChatContainerRoot} from "@/components/ui/chat-container";
 
 export const publicPages: Page[] = [
   { path: "/", component: PageHome },
@@ -76,6 +77,14 @@ const MyRoutes = () => {
       </Routes>
 
       <Footer />
+      {
+        /*
+      <ChatContainerRoot className="fixed bottom-4 right-4 w-[380px] max-w-[90vw]">
+        <div className="p-4">Chat coming soon</div>
+      </ChatContainerRoot>
+        */
+      }
+      
       
     </BrowserRouter>
   );

@@ -1,10 +1,11 @@
 import TabComponent from "../../../components/TabComponent";
 import PageAudioPodcastScript from "./audio-podcast/audio-podcast";
-import Conversation from "./conversation/conversation";
+import {PromptInputWithActions} from "./conversation/conversation-v3";
 import PagePodcastScript from "./podcast-script/podcast-script";
 import { useUpdatePodcastMutation } from "store/services/podcastApi";
 import PageAudioPodcast from "./audio-podcast/audio-podcast";
 import { useGetPodcastByIdQuery } from "store/services/podcastApi";
+import {FullChatApp} from "./conversation/conversation-v4";
 
 type EditPodcastProps = {
   podcastId: string;
@@ -46,7 +47,10 @@ const PageEditPodcast = ({ podcastId }: EditPodcastProps) => {
     {
       label: "Conversation",
       content: (
-        <Conversation podcast={podcastData} podcastId={podcastId} sendToScript={handleConversationSentPodcast} />
+        <div className="h-full">
+
+        <FullChatApp />
+        </div>
       ),
     },
     {
@@ -62,7 +66,7 @@ const PageEditPodcast = ({ podcastId }: EditPodcastProps) => {
   ];
 
   return (
-    <div className="flex flex-col h-screen">
+    <div className="">
       <TabComponent tabs={tabs} />
     </div>
   );
